@@ -22,7 +22,7 @@ Our Cybersecurity News Filtering App is going to be able to allow users to make 
 
 ## 3 Architectural Design
 
-![Architectual Design](https://raw.githubusercontent.com/sobiesca/CNF_CIS350/blob/main/Pictures/Architectural%20Design.png)
+![Architectual Design](https://github.com/sobiesca/CNF_CIS350/blob/main/Pictures/Architectural%20Design.png)
 
 
 ## 3.1 Use Case Diagram
