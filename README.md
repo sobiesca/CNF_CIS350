@@ -22,28 +22,28 @@ Our Cybersecurity News Filtering App is going to be able to allow users to make 
 
 ## 3 Architectural Design
 
-![Alt text](<Sequence Diagram-1.png>)
+![Architectual Design](https://raw.githubusercontent.com/sobiesca/CNF_CIS350/blob/main/Pictures/Architectural%20Design.png)
 
 
 ## 3.1 Use Case Diagram
 
-![Alt text](<Use Case Diagram.png>)
+![Use Case](https://raw.githubusercontent.com/sobiesca/CNF_CIS350/blob/main/Pictures/Use%20Case%20Diagram.png)
 
 ## 3.2 Sequence Diagram
 
-![Alt text](<Sequence Diagram.png>)
+![Sequence Diagram](https://raw.githubusercontent.com/sobiesca/CNF_CIS350/blob/main/Pictures/Sequence%20Diagram.png)
 
 ## 4 User Interface Designs
 
 ### Front Page UI
 
-![Alt text](<Front Page UI.png>)
+![Front Page UI](https://raw.githubusercontent.com/sobiesca/CNF_CIS350/blob/main/Pictures/Front%20Page%20UI.png)
 
 ### Search Page UI
 
-![Alt text](<Search Page UI.png>)
+![Search Page UI](https://raw.githubusercontent.com/sobiesca/CNF_CIS350/blob/main/Pictures/Search%20Page%20UI.png)
 
 ### Filters Page UI
 
-![Alt text](<Filters Page UI.png>)
+![Filters Page UI](https://raw.githubusercontent.com/sobiesca/CNF_CIS350/blob/main/Pictures/Filters%20Page%20UI.png)
 
