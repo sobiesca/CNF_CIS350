@@ -35,7 +35,7 @@ Our Cybersecurity News Filtering App is going to be able to allow users to make 
 
 ## 3.3 Class Diagram 
 
-![Class Diagram](https://github.com/sobiesca/CNF_CIS350/blob/main/Pictures/Cyber_news_app_Class_Diagram.pdf)
+![Class Diagram](https://github.com/sobiesca/CNF_CIS350/blob/main/Pictures/Class_Diagram.PNG)
 
 ## 4 User Interface Designs
 
