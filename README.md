@@ -33,7 +33,7 @@ Our Cybersecurity News Filtering App is going to be able to allow users to make 
 
 ![Sequence Diagram](https://github.com/sobiesca/CNF_CIS350/blob/main/Pictures/Sequence%20Diagram.png)
 
-## 3.3 Class Diagram 
+## 3.3 Class Diagram
 
 ![Class Diagram](https://github.com/sobiesca/CNF_CIS350/blob/main/Pictures/Class_Diagram.PNG)
 
@@ -41,13 +41,12 @@ Our Cybersecurity News Filtering App is going to be able to allow users to make 
 
 ### Front Page UI
 
-![Front Page UI](https://github.com/sobiesca/CNF_CIS350/blob/main/Pictures/Front%20Page%20UI.png)
+![Front Page UI](https://github.com/sobiesca/CNF_CIS350/blob/main/Pictures/Home_Page_V2.PNG)
 
-### Search Page UI
+### Search Page With No Filter UI
 
-![Search Page UI](https://github.com/sobiesca/CNF_CIS350/blob/main/Pictures/Search%20Page%20UI.png)
+![Search Page UI](https://github.com/sobiesca/CNF_CIS350/blob/main/Pictures/Article_Feed_V2.PNG)
 
-### Filters Page UI
+### Search Page With Filter UI
 
-![Filters Page UI](https://github.com/sobiesca/CNF_CIS350/blob/main/Pictures/Filters%20Page%20UI.png)
-
+![Search Page UI](https://github.com/sobiesca/CNF_CIS350/blob/main/Pictures/Article_Feed_Filter_V2.PNG)

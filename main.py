@@ -18,7 +18,7 @@ class NewsFilter:
         filter_button.grid(row=0, column=2, padx=10, pady=10)
 
         # Display area for RSS news information
-        self.news_list = tk.Listbox(root, width=70, height=20)
+        self.news_list = tk.Listbox(root, width=150, height=20)                       #having Width set to 0 makes the RSS feed size Dynamic
         self.news_list.grid(row=1, column=0, columnspan=3, padx=10, pady=10)
 
         # Label for the filtered RSS news information
