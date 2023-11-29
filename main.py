@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import filedialog
 import feedparser
 import webbrowser
 
@@ -11,14 +12,14 @@ class NewsFilter:
         # User input field of UI
         self.filter_entry = tk.Entry(root, width=50)
         self.filter_entry.grid(row=0, column=0, padx=10, pady=10, sticky='w')
-        self.filter_entry.insert(0, "Enter keywords to filter news")
+        self.filter_entry.insert(0, "")
 
         # Filter button
         filter_button = tk.Button(root, text="Filter", command=self.filter_news)
         filter_button.grid(row=0, column=2, padx=10, pady=10)
 
         # Display area for RSS news information
-        self.news_list = tk.Listbox(root, width=150, height=20)                       #having Width set to 0 makes the RSS feed size Dynamic
+        self.news_list = tk.Listbox(root, width=70, height=20)
         self.news_list.grid(row=1, column=0, columnspan=3, padx=10, pady=10)
 
         # Label for the filtered RSS news information
@@ -43,11 +44,11 @@ class NewsFilter:
             # Loops through the specific URL the previous loop is currently on
             # And extracts the Title, Published Date, and Link
             for entry in rss_feed.entries:
-                title = entry.title
-                pub_date = entry.published
-                link = entry.link
+                title = entry.get('title', '')  # Accessing 'title' key from the dictionary
+                pub_date = entry.get('published', '')  # Accessing 'published' key
+                link = entry.get('link', '')  # Accessing 'link' key
 
-                # Fileters information by keywords in the title of RSS feed entry
+                # Filters information by keywords in the title of RSS feed entry
                 # Adds information we wanted from the RSS feed and displays it in the news_list
                 if keywords.lower() in title.lower():
                     self.news_list.insert(tk.END, f"Title: {title}")
@@ -71,7 +72,7 @@ class NewsViewer:
         # Current selected filtered information
         selected = self.news_list.curselection()
         # Checks if you have something selected
-        # Splits required information for openeing the web browser link so no errors occur
+        # Splits required information for opening the web browser link so no errors occur
         if selected:
             index = selected[0]
             link = self.news_list.get(index).split("Link: ")[1]
@@ -86,24 +87,21 @@ class NewsSaver:
         save_button = tk.Button(root, text="Save", command=self.save_data)
         save_button.grid(row=2, column=2, padx=10, pady=10)
 
-        # Creates the textbox for the user to enter the desired file path for saving
-        self.file_path_entry = tk.Entry(root, width=50)
-        self.file_path_entry.grid(row=3, column=0, padx=10, pady=10)
-        self.file_path_entry.insert(0, "Enter file path and file name")
-
         self.news_list = news_list
 
     # Allows user to save the filtered data in the news_list
     def save_data(self):
         selected = self.news_list.get(0, tk.END)  # Get all displayed news
-        file_path = self.file_path_entry.get()
 
-        # Opens the desired file path
-        # Loops through all displayed news
-        # Writes the information to the desired file path
-        with open(file_path, 'w') as file:
-            for news_item in selected:
-                file.write(news_item + '\n')
+        # Open file dialog for selecting the file path
+        file_path = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text files", "*.txt")])
+        
+        if file_path:
+            # Writes the information to the selected file path
+            with open(file_path, 'w') as file:
+                for news_item in selected:
+                    file.write(news_item + '\n')
+
 
 
 def main():
